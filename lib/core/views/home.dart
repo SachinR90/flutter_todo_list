@@ -93,8 +93,8 @@ class _HomeState extends State<Home> implements HomeViewContract {
     return widget;
   }
 
-  List<TodoListItem> _buildTodoList() {
-    return _todoList.map((todo) => TodoListItem(todo)).toList();
+  List<Widget> _buildTodoList() {
+    return _todoList.map((todo) => Card(child: TodoListItem(todo))).toList();
   }
 
   void _showDialog(String message) {
